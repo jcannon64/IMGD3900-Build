@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: bfbe66ac5da7c1e4196cc5340c3933cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3091935035966987506
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_0
+  - first:
+      213: 2047195003564413482
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_1
+  - first:
+      213: 6588138151819429162
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_2
+  - first:
+      213: 4292684174594239656
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_3
+  - first:
+      213: 4854278130947208249
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_4
+  - first:
+      213: 7716481074231445587
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_5
+  - first:
+      213: 8484166701956503262
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_6
+  - first:
+      213: 7944765065542212922
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_7
+  - first:
+      213: -8515553542621424621
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_8
+  - first:
+      213: -7256802338374132730
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_9
+  - first:
+      213: -3527278412429121874
+    second: Main_Character_Brass_Knuckles_Punch_not_moving_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_0
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 3194
+        width: 197
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fc956f8882c8ea20800000000000000
+      internalID: 3091935035966987506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_1
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 3194
+        width: 197
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a22596d5209196c10800000000000000
+      internalID: 2047195003564413482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_2
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 3194
+        width: 197
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25456e5eb4cd6b50800000000000000
+      internalID: 6588138151819429162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 2234
+        width: 197
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac61af538da29b30800000000000000
+      internalID: 4292684174594239656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_4
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 2234
+        width: 197
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9343e04bd3cdd5340800000000000000
+      internalID: 4854278130947208249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_5
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 2234
+        width: 197
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 358079147a2761b60800000000000000
+      internalID: 7716481074231445587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_6
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1274
+        width: 212
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed690551aa0ddb570800000000000000
+      internalID: 8484166701956503262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_7
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 1274
+        width: 212
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3d9393ebb9714e60800000000000000
+      internalID: 7944765065542212922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_8
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 1274
+        width: 242
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3141b3a9b2da2d980800000000000000
+      internalID: -8515553542621424621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_9
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1154
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60c5cffa8b8aa4b90800000000000000
+      internalID: -7256802338374132730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Main_Character_Brass_Knuckles_Punch_not_moving_10
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 314
+        width: 242
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea62243e8f69c0fc0800000000000000
+      internalID: -3527278412429121874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Main_Character_Brass_Knuckles_Punch_not_moving_0: 3091935035966987506
+      Main_Character_Brass_Knuckles_Punch_not_moving_1: 2047195003564413482
+      Main_Character_Brass_Knuckles_Punch_not_moving_10: -3527278412429121874
+      Main_Character_Brass_Knuckles_Punch_not_moving_2: 6588138151819429162
+      Main_Character_Brass_Knuckles_Punch_not_moving_3: 4292684174594239656
+      Main_Character_Brass_Knuckles_Punch_not_moving_4: 4854278130947208249
+      Main_Character_Brass_Knuckles_Punch_not_moving_5: 7716481074231445587
+      Main_Character_Brass_Knuckles_Punch_not_moving_6: 8484166701956503262
+      Main_Character_Brass_Knuckles_Punch_not_moving_7: 7944765065542212922
+      Main_Character_Brass_Knuckles_Punch_not_moving_8: -8515553542621424621
+      Main_Character_Brass_Knuckles_Punch_not_moving_9: -7256802338374132730
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
