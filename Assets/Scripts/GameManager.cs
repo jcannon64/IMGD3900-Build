@@ -7,14 +7,9 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         DontDestroyOnLoad(gameObject);
-        NewGame();
     }
 
-    private void NewGame() {
-        LoadLevel(1);
-    }
-
-    private void LoadLevel(int index) {
+    public void LoadLevel(int index) {
         level = index;
 
         Camera camera = Camera.main;
@@ -22,7 +17,7 @@ public class GameManager : MonoBehaviour
             camera.cullingMask = 0;
         }
 
-        Invoke(nameof(LoadScene), 1f);
+        LoadScene();
     }
 
     private void LoadScene() {
@@ -38,10 +33,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void LevelFailed() {
-        LoadLevel(level);
-    }
-
-    public void QuitGame() {
-        Application.Quit();
+        LoadLevel(2);
     }
 }
