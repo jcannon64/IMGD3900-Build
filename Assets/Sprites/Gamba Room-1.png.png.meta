@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gamba Room-1.png_0: 3568434267102309056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

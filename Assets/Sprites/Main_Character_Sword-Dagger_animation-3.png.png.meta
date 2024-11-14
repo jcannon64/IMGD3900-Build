@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Main_Character_Sword-Dagger_animation-3.png_0: 9222756692933056567
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bat_Swing-7.png (1)_0: 586198526075672140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
