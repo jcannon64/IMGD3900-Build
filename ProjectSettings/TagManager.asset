@@ -4,7 +4,10 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Security
+  - Rat
   - Enemy
+  - Hitbox
   layers:
   - Default
   - TransparentFX
@@ -13,8 +16,8 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
-  - 
+  - Enemy
+  - Player
   - 
   - 
   - 
