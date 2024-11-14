@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Evil_Policeman_0: 7636782294452982693
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

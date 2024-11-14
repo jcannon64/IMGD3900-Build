@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Weapon_Sword-Dagger_Card_0: -4242471258175675484
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
