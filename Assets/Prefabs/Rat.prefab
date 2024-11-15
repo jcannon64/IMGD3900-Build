@@ -177,9 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 517081264861855813, guid: 3a57e7793ca952b4689b86dcb495ea0b, type: 3}
+  cardDrop: {fileID: 0}
   moveSpeed: 7.5
   jumpStrength: 5
-  health: 1
+  health: 10
+  damage: 10
 --- !u!82 &7120797840963550053
 AudioSource:
   m_ObjectHideFlags: 0

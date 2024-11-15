@@ -24,13 +24,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(level);
     }
 
-    public void LevelComplete() {
+    /*public void LevelComplete() {
         int nextLevel = level + 1;
         if(nextLevel < SceneManager.sceneCountInBuildSettings) {
             LoadLevel(nextLevel);
         }
         else LoadLevel(1);
-    }
+    }*/
 
     public void LevelFailed() {
         LoadLevel(2);

@@ -8,6 +8,13 @@ TagManager:
   - Rat
   - Enemy
   - Hitbox
+  - To Level
+  - To Shop
+  - Explosion
+  - Hearts Ammo
+  - Spades Ammo
+  - Clubs Ammo
+  - Diamonds Ammo
   layers:
   - Default
   - TransparentFX

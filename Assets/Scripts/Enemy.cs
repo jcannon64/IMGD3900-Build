@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject player;
+    public GameObject cardDrop;
     
     //private SpriteRenderer spriteRenderer;
     //public Sprite[] runSprites;
@@ -18,7 +19,7 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 1f;
     public float jumpStrength = 1f;
     public float health = 3f;
-
+    public float damage = 1f;
     private bool grounded;
 
     private void Awake() {
@@ -63,6 +64,7 @@ public class Enemy : MonoBehaviour
             direction.x = -moveSpeed;
         }
         else direction.x = moveSpeed;
+
         if(grounded) {
             direction.y = Mathf.Max(direction.y, -1f);
         }
@@ -97,18 +99,33 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Hitbox")) {
-            health -= 1;
+            TakeDamage(FindAnyObjectByType<Player>().damage);
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource hurt = sounds[0];
             hurt.Play();
-            //collision.gameObject.SetActive(false);
             Destroy(collision.gameObject);
-            //rigidbody.AddForce(Vector3.right * 10, ForceMode2D.Impulse);
-            //rigidbody.linearVelocity = transform.TransformDirection(Vector3.forward * 10);
-            
-            if(health == 0) {
-                gameObject.SetActive(false);
-            }
         }
+        else if(collision.gameObject.CompareTag("Explosion")) {
+            TakeDamage(10);
+            AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
+            AudioSource hurt = sounds[0];
+            hurt.Play();
+        }
+        else if(collision.gameObject.CompareTag("Player")) {
+            FindAnyObjectByType<Player>().TakeDamage(damage);
+        }
+
+        if(health <= 0) {
+            if(gameObject.CompareTag("Security")) {
+                Instantiate(cardDrop, transform.position, Quaternion.identity);
+                FindAnyObjectByType<Player>().GainChips(100);
+            }
+            else FindAnyObjectByType<Player>().GainChips(50);
+            gameObject.SetActive(false);
+        }
+    }
+
+    public void TakeDamage(float damage) {
+        health -= damage;
     }
 }
