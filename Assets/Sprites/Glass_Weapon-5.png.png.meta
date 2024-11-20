@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Glass_Weapon-5.png_0: -7277354389961556270
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

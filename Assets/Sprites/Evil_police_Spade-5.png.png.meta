@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Evil_police_Spade-5.png_0: 3160857764029280697
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

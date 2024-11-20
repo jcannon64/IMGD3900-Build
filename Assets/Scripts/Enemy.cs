@@ -122,6 +122,7 @@ public class Enemy : MonoBehaviour
             }
             else FindAnyObjectByType<Player>().GainChips(50);
             gameObject.SetActive(false);
+            FindAnyObjectByType<Player>().KillReduction();
         }
     }
 

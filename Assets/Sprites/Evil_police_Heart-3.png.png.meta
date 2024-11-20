@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Evil_police_Heart-3.png_0: -5505311132468476190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

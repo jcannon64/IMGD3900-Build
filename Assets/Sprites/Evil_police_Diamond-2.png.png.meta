@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Evil_police_Diamond-2.png_0: 4197599621488069825
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

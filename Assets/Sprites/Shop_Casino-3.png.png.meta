@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Shop_Casino-3.png_0: -7118948728025037748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
