@@ -279,6 +279,13 @@ public class Player : MonoBehaviour
         else if(collision.gameObject.CompareTag("To Shop")) {
             FindAnyObjectByType<GameManager>().LoadLevel(3);
         }
+        else if(collision.gameObject.CompareTag("To Next Area"))
+        {
+            if(killCount == 0)
+            {
+                FindAnyObjectByType<GameManager>().LoadLevel(1);
+            }
+        }
         else if(collision.gameObject.CompareTag("Hearts Ammo")) {
             heartsAmmo += 1;
             Destroy(collision.gameObject);

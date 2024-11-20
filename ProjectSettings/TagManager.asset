@@ -15,6 +15,7 @@ TagManager:
   - Spades Ammo
   - Clubs Ammo
   - Diamonds Ammo
+  - To Next Area
   layers:
   - Default
   - TransparentFX
