@@ -20,6 +20,11 @@ public class GameManager : MonoBehaviour
         LoadScene();
     }
 
+    public int currLevel()
+    {
+        return level;
+    }
+
     private void LoadScene() {
         SceneManager.LoadScene(level);
     }
@@ -29,7 +34,10 @@ public class GameManager : MonoBehaviour
         if(nextLevel < SceneManager.sceneCountInBuildSettings) {
             LoadLevel(nextLevel);
         }
-        else LoadLevel(1);
+        else 
+        {
+            LoadLevel(1);
+        }
     }*/
 
     public void LevelFailed() {

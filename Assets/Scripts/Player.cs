@@ -32,6 +32,8 @@ public class Player : MonoBehaviour
     public Sprite hearts;
     public Sprite clubs;
     public Sprite diamonds;
+    public int killCount = 7;
+    public bool StageStart = true;
 
     private bool grounded;
     private bool attacking = false;
@@ -77,8 +79,13 @@ public class Player : MonoBehaviour
 
     private void Update() {
         CheckCollision();
-
-        UIText.SetText("Health: " + health.ToString() + " Chips: " + chips.ToString());
+        if(StageStart == true)
+        {
+            killCount = 7;
+            StageStart= false;
+        }
+        
+        UIText.SetText("Health: " + health.ToString() + " Chips: " + chips.ToString() + "\n" + " Enemies remaining: " + killCount.ToString());
         switch(weapon) {
             case 1:
                 SuitText.SetText("Spades " + " Ammo: " + spadesAmmo);
@@ -272,6 +279,20 @@ public class Player : MonoBehaviour
         else if(collision.gameObject.CompareTag("To Shop")) {
             FindAnyObjectByType<GameManager>().LoadLevel(3);
         }
+        else if(collision.gameObject.CompareTag("To Next Area"))
+        {
+            if(killCount == 0)
+            {
+                if(FindAnyObjectByType<GameManager>().currLevel() == 1)
+                {
+                    FindAnyObjectByType<GameManager>().LoadLevel(4);
+                }
+                else if(FindAnyObjectByType<GameManager>().currLevel() == 4)
+                {
+                    FindAnyObjectByType<GameManager>().LoadLevel(1);
+                }
+            }
+        }
         else if(collision.gameObject.CompareTag("Hearts Ammo")) {
             heartsAmmo += 1;
             Destroy(collision.gameObject);
@@ -296,5 +317,18 @@ public class Player : MonoBehaviour
 
     public void GainChips(float amount) {
         chips += amount;
+    }
+
+    public void KillReduction()
+    {
+        killCount--;
+    }
+
+    public void NextStage()
+    {
+        if(killCount == 0)
+        {
+            //display the signs on the stage in respective locations, then change the edge of the map objects to go to respective areas
+        }
     }
 }
