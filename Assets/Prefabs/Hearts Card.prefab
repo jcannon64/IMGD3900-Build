@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1426584964248064853}
   - component: {fileID: 4770870161392861743}
   - component: {fileID: -5320320454431835353}
+  - component: {fileID: -2423732304180516557}
   m_Layer: 0
   m_Name: Hearts Card
-  m_TagString: Hitbox
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,3 +163,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-2423732304180516557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686339377347209698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe0fa4a60df8df4ca7c67943cd5f2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

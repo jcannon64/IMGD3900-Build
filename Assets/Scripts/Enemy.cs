@@ -100,16 +100,10 @@ public class Enemy : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Hitbox")) {
             TakeDamage(FindAnyObjectByType<Player>().damage);
-            AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
-            AudioSource hurt = sounds[0];
-            hurt.Play();
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("Explosion")) {
             TakeDamage(10);
-            AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
-            AudioSource hurt = sounds[0];
-            hurt.Play();
         }
         else if(collision.gameObject.CompareTag("Player")) {
             FindAnyObjectByType<Player>().TakeDamage(damage);
@@ -128,5 +122,8 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage) {
         health -= damage;
+        AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
+        AudioSource hurt = sounds[0];
+        hurt.Play();
     }
 }

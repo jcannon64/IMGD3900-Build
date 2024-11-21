@@ -10,6 +10,10 @@ public class ClubsCards : MonoBehaviour
         Invoke(nameof(Teleport), 1.25f);
     }
 
+    void Update() {
+        transform.Rotate(Vector3.back);
+    }
+
     private void playSound() {
         AudioSource teleport = gameObject.GetComponent<AudioSource>();
         teleport.Play();
@@ -18,5 +22,13 @@ public class ClubsCards : MonoBehaviour
     public void Teleport() {
         playerBody.position = gameObject.GetComponent<Rigidbody2D>().position;
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat")) {
+            if(Manager.clubsUpgrade) {
+                
+            }
+        }
     }
 }

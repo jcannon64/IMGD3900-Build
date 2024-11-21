@@ -16,6 +16,7 @@ TagManager:
   - Clubs Ammo
   - Diamonds Ammo
   - To Next Area
+  - Card
   layers:
   - Default
   - TransparentFX

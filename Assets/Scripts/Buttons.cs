@@ -3,7 +3,7 @@ using UnityEngine;
 public class Buttons : MonoBehaviour
 {
     public void OnPlayPress() {
-        FindAnyObjectByType<GameManager>().LoadLevel(1);
+        FindAnyObjectByType<GameManager>().NewGame();
     }
 
     public void OnMenuPress() {

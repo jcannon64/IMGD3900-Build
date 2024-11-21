@@ -21,10 +21,10 @@ public class Player : MonoBehaviour
 
     public float moveSpeed = 1f;
     public float jumpStrength = 1f;
-    public float health = 3f;
-    public float chips = 0f;
+    //public float health = 3f;
+    //public float chips = 0f;
     public float damage = 25f;
-    public float spadesAmmo, heartsAmmo, clubsAmmo, diamondsAmmo = 4f;
+    //public float spadesAmmo, heartsAmmo, clubsAmmo, diamondsAmmo = 4f;
     public TMP_Text UIText;
     public TMP_Text SuitText;
     public Image cardArt;
@@ -85,22 +85,22 @@ public class Player : MonoBehaviour
             StageStart= false;
         }
         
-        UIText.SetText("Health: " + health.ToString() + " Chips: " + chips.ToString() + "\n" + " Enemies remaining: " + killCount.ToString());
+        UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + "Enemies remaining: " + killCount.ToString());
         switch(weapon) {
             case 1:
-                SuitText.SetText("Spades " + " Ammo: " + spadesAmmo);
+                SuitText.SetText("Spades " + " Ammo: " + Manager.spadesAmmo);
                 cardArt.sprite = spades;
                 break;
             case 2:
-                SuitText.SetText("Hearts " + " Ammo: " + heartsAmmo);
+                SuitText.SetText("Hearts " + " Ammo: " + Manager.heartsAmmo);
                 cardArt.sprite = hearts;
                 break;
             case 3:
-                SuitText.SetText("Clubs " + " Ammo: " + clubsAmmo);
+                SuitText.SetText("Clubs " + " Ammo: " + Manager.clubsAmmo);
                 cardArt.sprite = clubs;
                 break;
             case 4:
-                SuitText.SetText("Diamonds " + " Ammo: " + diamondsAmmo);
+                SuitText.SetText("Diamonds " + " Ammo: " + Manager.diamondsAmmo);
                 cardArt.sprite = diamonds;
                 break;
         }
@@ -148,34 +148,34 @@ public class Player : MonoBehaviour
             GameObject newCard;
             switch(weapon) {
                 case 1:
-                    if(spadesAmmo > 0) {
+                    if(Manager.spadesAmmo > 0) {
                         newCard = Instantiate(spadesCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
-                        spadesAmmo -= 1;
+                        Manager.spadesAmmo -= 1;
                         card.Play();
                     }
                     break;
                 case 2:
-                    if(heartsAmmo > 0) {
+                    if(Manager.heartsAmmo > 0) {
                         newCard = Instantiate(heartsCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
-                        heartsAmmo -= 1;
+                        Manager.heartsAmmo -= 1;
                         card.Play();
                     }
                     break;
                 case 3:
-                    if(clubsAmmo > 0) {
+                    if(Manager.clubsAmmo > 0) {
                         newCard = Instantiate(clubsCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
-                        clubsAmmo -= 1;
+                        Manager.clubsAmmo -= 1;
                         card.Play();
                     }
                     break;
                 case 4:
-                    if(diamondsAmmo > 0) {
+                    if(Manager.diamondsAmmo > 0) {
                         newCard = Instantiate(diamondsCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
-                        diamondsAmmo -= 1;
+                        Manager.diamondsAmmo -= 1;
                         card.Play();
                     }
                     break;
@@ -268,7 +268,7 @@ public class Player : MonoBehaviour
             AudioSource hurt = sounds[3];
             hurt.Play();
             
-            if(health <= 0) {
+            if(Manager.health <= 0) {
                 enabled = false;
                 FindAnyObjectByType<GameManager>().LevelFailed();
             }
@@ -279,48 +279,43 @@ public class Player : MonoBehaviour
         else if(collision.gameObject.CompareTag("To Shop")) {
             FindAnyObjectByType<GameManager>().LoadLevel(3);
         }
-        else if(collision.gameObject.CompareTag("To Next Area"))
-        {
-            if(killCount == 0)
-            {
+        else if(collision.gameObject.CompareTag("To Next Area")) {
+            if(killCount <= 0) {
                 FindAnyObjectByType<GameManager>().LoadLevel(1);
             }
         }
         else if(collision.gameObject.CompareTag("Hearts Ammo")) {
-            heartsAmmo += 1;
+            Manager.heartsAmmo += 1;
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("Spades Ammo")) {
-            spadesAmmo += 1;
+            Manager.spadesAmmo += 1;
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("Clubs Ammo")) {
-            clubsAmmo += 1;
+            Manager.clubsAmmo += 1;
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("Diamonds Ammo")) {
-            diamondsAmmo += 1;
+            Manager.diamondsAmmo += 1;
             Destroy(collision.gameObject);
         }
     }
 
     public void TakeDamage(float damage) {
-        health -= damage;
+        Manager.health -= damage;
     }
 
     public void GainChips(float amount) {
-        chips += amount;
+        Manager.chips += amount;
     }
 
-    public void KillReduction()
-    {
+    public void KillReduction() {
         killCount--;
     }
 
-    public void NextStage()
-    {
-        if(killCount == 0)
-        {
+    public void NextStage() {
+        if(killCount == 0) {
             //display the signs on the stage in respective locations, then change the edge of the map objects to go to respective areas
         }
     }
