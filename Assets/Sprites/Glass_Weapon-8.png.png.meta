@@ -111,6 +111,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -259,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Glass_Weapon-8.png_0: -1266216993036589015
+      Glass_Weapon-8.png_1: 9001061871304238438
+      Glass_Weapon-8.png_2: -554299106901787583
+      Glass_Weapon-8.png_3: -1290754446475748406
+      Glass_Weapon-8.png_4: -5218859203794185992
+      Glass_Weapon-8.png_5: -3835602667670542056
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
