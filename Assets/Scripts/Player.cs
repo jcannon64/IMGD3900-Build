@@ -283,7 +283,14 @@ public class Player : MonoBehaviour
         {
             if(killCount == 0)
             {
-                FindAnyObjectByType<GameManager>().LoadLevel(1);
+                if(FindAnyObjectByType<GameManager>().currLevel() == 1)
+                {
+                    FindAnyObjectByType<GameManager>().LoadLevel(4);
+                }
+                else if(FindAnyObjectByType<GameManager>().currLevel() == 4)
+                {
+                    FindAnyObjectByType<GameManager>().LoadLevel(1);
+                }
             }
         }
         else if(collision.gameObject.CompareTag("Hearts Ammo")) {
