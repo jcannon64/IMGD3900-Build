@@ -23,12 +23,4 @@ public class ClubsCards : MonoBehaviour
         playerBody.position = gameObject.GetComponent<Rigidbody2D>().position;
         Destroy(gameObject);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat")) {
-            if(Manager.clubsUpgrade) {
-                
-            }
-        }
-    }
 }

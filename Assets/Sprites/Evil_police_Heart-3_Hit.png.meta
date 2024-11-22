@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a4e480cd249270449f745523040f020
+guid: 2623c26c0149eb9448b6da6c01e1254a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7822570998930093111
-    second: New_Stage_Sign_0
+      213: 3049144056412195378
+    second: Evil_police_Heart-3_Hit_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: New_Stage_Sign_0
+      name: Evil_police_Heart-3_Hit_0
       rect:
         serializedVersion: 2
-        x: 659
-        y: 269
-        width: 452
-        height: 602
+        x: 389
+        y: 314
+        width: 227
+        height: 437
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7343085b0ea5f8c60800000000000000
-      internalID: 7822570998930093111
+      spriteID: 23a417f3d5cb05a20800000000000000
+      internalID: 3049144056412195378
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      New_Stage_Sign_0: 7822570998930093111
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

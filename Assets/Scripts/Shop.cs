@@ -5,7 +5,7 @@ public class Shop : MonoBehaviour
     public int itemNum = 0;
 
     private void OnTriggerStay2D(Collider2D collision) {
-        if(Input.GetButtonDown("Submit")) {
+        if(Input.GetButton("Submit")) {
             switch(itemNum) {
                 case 0:
                     if(Manager.chips >= 50) {

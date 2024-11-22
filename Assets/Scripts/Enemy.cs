@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -5,7 +6,10 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public GameObject cardDrop;
     
-    //private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
+    //public Sprite normalSprite;
+    //public Sprite hurtSprite;
+    public Sprite[] sprites;
     //public Sprite[] runSprites;
     //public Sprite[] attackSprites;
     //private int spriteIndex;
@@ -21,9 +25,11 @@ public class Enemy : MonoBehaviour
     public float health = 3f;
     public float damage = 1f;
     private bool grounded;
+    private bool knockback= false;
+    public TMP_Text healthText;
 
     private void Awake() {
-        //spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         results = new Collider2D[4];
@@ -56,11 +62,16 @@ public class Enemy : MonoBehaviour
 
     private void Update() {
         CheckCollision();
+
+        healthText.SetText(health.ToString());
         
         direction += Physics2D.gravity * Time.deltaTime;
 
         float playerLocation = player.transform.position.x - transform.position.x;
-        if(playerLocation < 0) {
+        if(knockback) {
+            direction.x = moveSpeed * 5 * -rigidbody.transform.right.x;
+        }
+        else if(playerLocation < 0) {
             direction.x = -moveSpeed;
         }
         else direction.x = moveSpeed;
@@ -69,11 +80,16 @@ public class Enemy : MonoBehaviour
             direction.y = Mathf.Max(direction.y, -1f);
         }
 
-        if(direction.x > 0f) {
+        if(knockback) {
+
+        }
+        else if(direction.x > 0f) {
             transform.eulerAngles = Vector3.zero;
+            healthText.transform.eulerAngles = Vector3.zero;
         }
         else if(direction.x < 0f) {
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
+            healthText.transform.eulerAngles = Vector3.zero;
         }
     }
 
@@ -99,8 +115,19 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Hitbox")) {
+            knockback = true;
+            Invoke(nameof(EndKB), 0.25f);
             TakeDamage(FindAnyObjectByType<Player>().damage);
             Destroy(collision.gameObject);
+        }
+        else if(collision.gameObject.CompareTag("Card")) {
+            if(Manager.spadesUpgrade == false) {
+                TakeDamage(FindAnyObjectByType<Player>().damage);
+                Destroy(collision.gameObject);
+            }
+            else if(Manager.clubsUpgrade == true || Manager.spadesUpgrade == true) {
+                TakeDamage(FindAnyObjectByType<Player>().damage);
+            }
         }
         else if(collision.gameObject.CompareTag("Explosion")) {
             TakeDamage(10);
@@ -125,5 +152,15 @@ public class Enemy : MonoBehaviour
         AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
         AudioSource hurt = sounds[0];
         hurt.Play();
+        spriteRenderer.sprite = sprites[1];
+        Invoke(nameof(normalizeSprite), 0.25f);
+    }
+
+    private void normalizeSprite() {
+        spriteRenderer.sprite = sprites[0];
+    }
+
+    private void EndKB() {
+        knockback = false;
     }
 }
