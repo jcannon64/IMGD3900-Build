@@ -10,6 +10,19 @@ public class ClubsCards : MonoBehaviour
         Invoke(nameof(Teleport), 1.25f);
     }
 
+    void Update() {
+        transform.Rotate(Vector3.back);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.layer == LayerMask.NameToLayer("Default")) {
+            Teleport();
+        }
+        else if(Manager.clubsUpgrade && other.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
+            other.GetComponent<Enemy>().TakeDamage(10);
+        }
+    }
+
     private void playSound() {
         AudioSource teleport = gameObject.GetComponent<AudioSource>();
         teleport.Play();

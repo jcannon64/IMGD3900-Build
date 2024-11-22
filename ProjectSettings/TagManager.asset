@@ -16,7 +16,11 @@ TagManager:
   - Clubs Ammo
   - Diamonds Ammo
   - To Next Area
-  - Stage Completion
+  - Spades
+  - Hearts
+  - Clubs
+  - Diamonds
+  - Card
   layers:
   - Default
   - TransparentFX
