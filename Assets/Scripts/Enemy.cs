@@ -8,8 +8,6 @@ public class Enemy : MonoBehaviour
     public GameObject sign;
     
     private SpriteRenderer spriteRenderer;
-    //public Sprite normalSprite;
-    //public Sprite hurtSprite;
     public Sprite[] sprites;
     //public Sprite[] runSprites;
     //public Sprite[] attackSprites;
@@ -70,7 +68,7 @@ public class Enemy : MonoBehaviour
 
         float playerLocation = player.transform.position.x - transform.position.x;
         if(knockback) {
-            direction.x = moveSpeed * 5 * -rigidbody.transform.right.x;
+            direction.x = moveSpeed * 5 * -rigidbody.transform.right.x / rigidbody.mass;
         }
         else if(playerLocation < 0) {
             direction.x = -moveSpeed;
@@ -122,20 +120,26 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("Card")) {
-            if(Manager.spadesUpgrade == false) {
-                TakeDamage(FindAnyObjectByType<Player>().damage);
-                Destroy(collision.gameObject);
-            }
-            else if(Manager.clubsUpgrade == true || Manager.spadesUpgrade == true) {
-                TakeDamage(FindAnyObjectByType<Player>().damage);
-            }
+            TakeDamage(FindAnyObjectByType<Player>().damage);
+            Destroy(collision.gameObject);
         }
         else if(collision.gameObject.CompareTag("Explosion")) {
             TakeDamage(10);
+            if(Manager.diamondsUpgrade == true) {
+                knockback = true;
+                Invoke(nameof(EndKB), 0.25f);
+            }
         }
         else if(collision.gameObject.CompareTag("Player")) {
             FindAnyObjectByType<Player>().TakeDamage(damage);
         }
+    }
+
+    public void TakeDamage(float damage) {
+        health -= damage;
+        AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
+        AudioSource hurt = sounds[0];
+        hurt.Play();
 
         if(health <= 0) {
             if(gameObject.CompareTag("Security")) {
@@ -147,13 +151,7 @@ public class Enemy : MonoBehaviour
             FindAnyObjectByType<Player>().KillReduction();
             FindAnyObjectByType<SignToggle>().toggle();
         }
-    }
-
-    public void TakeDamage(float damage) {
-        health -= damage;
-        AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
-        AudioSource hurt = sounds[0];
-        hurt.Play();
+        
         spriteRenderer.sprite = sprites[1];
         Invoke(nameof(normalizeSprite), 0.25f);
     }

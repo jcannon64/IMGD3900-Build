@@ -16,6 +16,10 @@ TagManager:
   - Clubs Ammo
   - Diamonds Ammo
   - To Next Area
+  - Spades
+  - Hearts
+  - Clubs
+  - Diamonds
   - Card
   layers:
   - Default

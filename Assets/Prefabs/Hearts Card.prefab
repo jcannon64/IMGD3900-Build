@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2423732304180516557}
   m_Layer: 0
   m_Name: Hearts Card
-  m_TagString: Hitbox
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -229,7 +229,7 @@ MonoBehaviour:
   - {fileID: -1266216993036589015, guid: a35dca81805d4864ab1e5ea4fbbd2e6f, type: 3}
   - {fileID: -5550262161136212538, guid: 4f5aaddeff594f448bf16456b6b540a0, type: 3}
   moveSpeed: 10
-  jumpStrength: 15
+  jumpStrength: 25
   health: 100
   chips: 0
   damage: 25
@@ -244,6 +244,8 @@ MonoBehaviour:
   hearts: {fileID: 7024463549750776018, guid: 47777ea380a57eb4285cbf2325e4a3de, type: 3}
   clubs: {fileID: 4424857163169345425, guid: c1c0d42e1b61de74c9bb7738b393d38c, type: 3}
   diamonds: {fileID: -2739097861073007334, guid: 8950fd795423a3845be5efd0dbf6e12f, type: 3}
+  killCount: 7
+  StageStart: 1
   punchHitbox: {fileID: 6335265403923427878, guid: b04d74c62ffd46d4fb2cb3ad4d955684, type: 3}
   spadesCard: {fileID: 1686339377347209698, guid: d68b90f073a643b4cae7193c68217361, type: 3}
   daggerHitbox: {fileID: 6335265403923427878, guid: 89c95ff335ba32049b7181eed24c9896, type: 3}
@@ -252,6 +254,7 @@ MonoBehaviour:
   clubsCard: {fileID: 1686339377347209698, guid: aec3019b41146294e810ad57d4c1cfc7, type: 3}
   glassHitbox: {fileID: 6335265403923427878, guid: 96de429cda6227345a241fed4d7585cd, type: 3}
   diamondsCard: {fileID: 1686339377347209698, guid: 85d7bd3c8756a6d4183234291b743392, type: 3}
+  sign: {fileID: 0}
 --- !u!82 &-4003466359264008135
 AudioSource:
   m_ObjectHideFlags: 0

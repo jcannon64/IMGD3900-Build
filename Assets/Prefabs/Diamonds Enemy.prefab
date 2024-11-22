@@ -326,7 +326,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 25
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
@@ -355,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 517081264861855813, guid: 3a57e7793ca952b4689b86dcb495ea0b, type: 3}
   cardDrop: {fileID: 1686339377347209698, guid: c4bc35ee1b1452b4da1635d9e21e825d, type: 3}
+  sign: {fileID: 0}
   sprites:
   - {fileID: 4197599621488069825, guid: 68e662a5251a589459778abdce30673c, type: 3}
   - {fileID: 3115147985625792609, guid: b4f072266c8329d439de3c8810fdb271, type: 3}
