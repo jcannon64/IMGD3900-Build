@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tiny_Card_Icons-5.png_0: 1394520689694014923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

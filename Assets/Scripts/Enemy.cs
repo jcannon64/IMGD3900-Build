@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject player;
     public GameObject cardDrop;
+    public GameObject sign;
     
     private SpriteRenderer spriteRenderer;
     //public Sprite normalSprite;
@@ -144,6 +145,7 @@ public class Enemy : MonoBehaviour
             else FindAnyObjectByType<Player>().GainChips(50);
             gameObject.SetActive(false);
             FindAnyObjectByType<Player>().KillReduction();
+            FindAnyObjectByType<SignToggle>().toggle();
         }
     }
 
