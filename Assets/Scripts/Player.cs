@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public float moveSpeed = 1f;
     public float jumpStrength = 1f;
     public float health = 3f;
+    public float MaxHealth;
     public float chips = 0f;
     public float damage = 25f;
     public float spadesAmmo, heartsAmmo, clubsAmmo, diamondsAmmo = 4f;
@@ -49,6 +50,7 @@ public class Player : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         results = new Collider2D[4];
+        MaxHealth = (int) health;
 
         attackSprites = punchSprites;
     }
@@ -85,7 +87,7 @@ public class Player : MonoBehaviour
             StageStart= false;
         }
         
-        UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + "Enemies remaining: " + killCount.ToString());
+        UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + " Enemies remaining: " + killCount.ToString());
         switch(weapon) {
             case 1:
                 SuitText.SetText("Spades " + " Ammo: " + Manager.spadesAmmo);

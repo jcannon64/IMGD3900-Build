@@ -2306,9 +2306,29 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 643410716}
+    - target: {fileID: 1116881379129208025, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116881379129208025, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116881379129208025, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2343087396295615573, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
       propertyPath: m_Name
       value: Clubs Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353208258103581034, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353208258103581034, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5655493394320289076, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2356,8 +2376,28 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7121432969778918567, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2092858847}
+    - targetCorrespondingSourceObject: {fileID: 7121432969778918567, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+--- !u!1 &2092858846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7121432969778918567, guid: d0e609b57f4f90942828ea5d5102a56a, type: 3}
+  m_PrefabInstance: {fileID: 2092858844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2092858847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092858846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efe0fa4a60df8df4ca7c67943cd5f2db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2112238171
 GameObject:
   m_ObjectHideFlags: 0
