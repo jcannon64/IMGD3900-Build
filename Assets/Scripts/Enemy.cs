@@ -32,8 +32,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] HealthBar healthBar;
     //private HealthBar healthBar;
 
-    private void Awake()
-    {
+    private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
@@ -42,18 +41,15 @@ public class Enemy : MonoBehaviour
         MaxHealth = health;
     }
 
-    private void OnEnable()
-    {
-        //InvokeRepeating(nameof(AnimateSprite), 1f/20f, 1f/20f);
+    /*private void OnEnable() {
+        InvokeRepeating(nameof(AnimateSprite), 1f/20f, 1f/20f);
     }
 
-    private void OnDisable()
-    {
+    private void OnDisable() {
         CancelInvoke();
-    }
+    }*/
 
-    private void CheckCollision()
-    {
+    private void CheckCollision() {
         grounded = false;
 
         Vector2 size = collider.bounds.size;
@@ -61,19 +57,19 @@ public class Enemy : MonoBehaviour
 
         int amount = Physics2D.OverlapBoxNonAlloc(transform.position, size, 0f, results);
 
-        for (int i = 0; i < amount; i++)
-        {
+        for(int i = 0; i < amount; i++) {
             GameObject hit = results[i].gameObject;
-            if (hit.layer == LayerMask.NameToLayer("Ground"))
-            {
+            if(hit.layer == LayerMask.NameToLayer("Ground")) {
                 grounded = hit.transform.position.y < (transform.position.y - 0.5f);
                 Physics2D.IgnoreCollision(collider, results[i], !grounded);
+            }
+            else if(hit.layer == LayerMask.NameToLayer("Player")) {
+                grounded = hit.transform.position.y < (transform.position.y - 0.5f);
             }
         }
     }
 
-    private void Update()
-    {
+    private void Update() {
         CheckCollision();
 
         healthText.SetText(health.ToString());
@@ -81,39 +77,39 @@ public class Enemy : MonoBehaviour
         direction += Physics2D.gravity * Time.deltaTime;
 
         float playerLocation = player.transform.position.x - transform.position.x;
-        if (knockback)
-        {
+        float playerHeight = player.transform.position.y - transform.position.y;
+        if(knockback) {
             direction.x = moveSpeed * 5 * -rigidbody.transform.right.x / rigidbody.mass;
         }
-        else if (playerLocation < 0)
-        {
+        else if(grounded && playerHeight > 6.5 && playerLocation < 2.5 && playerLocation > -2.5) {
+            direction = Vector2.up * jumpStrength;
+        }
+        else if(playerLocation < 0) {
             direction.x = -moveSpeed;
         }
-        else direction.x = moveSpeed;
+        else if(playerLocation > 0) {
+            direction.x = moveSpeed;
+        }
+        else direction.x = 0;
 
-        if (grounded)
-        {
+        if(grounded) {
             direction.y = Mathf.Max(direction.y, -1f);
         }
 
-        if (knockback)
-        {
-
-        }
-        else if (direction.x > 0f)
-        {
+        if(knockback) {}
+        else if(direction.x > 0f) {
             transform.eulerAngles = Vector3.zero;
             healthText.transform.eulerAngles = Vector3.zero;
+            healthBar.transform.eulerAngles = Vector3.zero;
         }
-        else if (direction.x < 0f)
-        {
+        else if(direction.x < 0f) {
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
             healthText.transform.eulerAngles = Vector3.zero;
+            healthBar.transform.eulerAngles = Vector3.zero;
         }
     }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         rigidbody.MovePosition(rigidbody.position + direction * Time.fixedDeltaTime);
     }
 
@@ -133,47 +129,38 @@ public class Enemy : MonoBehaviour
         }
     }*/
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Hitbox"))
-        {
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if(collision.gameObject.CompareTag("Hitbox")) {
             knockback = true;
             Invoke(nameof(EndKB), 0.25f);
             TakeDamage(FindAnyObjectByType<Player>().damage);
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Card"))
-        {
+        else if(collision.gameObject.CompareTag("Card")) {
             TakeDamage(FindAnyObjectByType<Player>().damage);
             Destroy(collision.gameObject);
         }
-        else if (collision.gameObject.CompareTag("Explosion"))
-        {
+        else if(collision.gameObject.CompareTag("Explosion")) {
             TakeDamage(10);
-            if (Manager.diamondsUpgrade == true)
-            {
+            if (Manager.diamondsUpgrade == true) {
                 knockback = true;
                 Invoke(nameof(EndKB), 0.25f);
             }
         }
-        else if (collision.gameObject.CompareTag("Player"))
-        {
+        else if(collision.gameObject.CompareTag("Player")) {
             FindAnyObjectByType<Player>().TakeDamage(damage);
         }
     }
 
-    public void TakeDamage(float damage)
-    {
+    public void TakeDamage(float damage) {
         health -= damage;
         healthBar.UpdateHealthBar(health, MaxHealth);
         AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
         AudioSource hurt = sounds[0];
         hurt.Play();
 
-        if (health <= 0)
-        {
-            if (gameObject.CompareTag("Security"))
-            {
+        if (health <= 0) {
+            if (gameObject.CompareTag("Security")) {
                 Instantiate(cardDrop, transform.position, Quaternion.identity);
                 FindAnyObjectByType<Player>().GainChips(100);
             }
@@ -187,13 +174,16 @@ public class Enemy : MonoBehaviour
         Invoke(nameof(normalizeSprite), 0.25f);
     }
 
-    private void normalizeSprite()
-    {
+    public void Heal(float healing) {
+        health += healing;
+        healthBar.UpdateHealthBar(health, MaxHealth);
+    }
+
+    private void normalizeSprite() {
         spriteRenderer.sprite = sprites[0];
     }
 
-    private void EndKB()
-    {
+    private void EndKB() {
         knockback = false;
     }
 }

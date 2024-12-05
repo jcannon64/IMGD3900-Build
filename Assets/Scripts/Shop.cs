@@ -3,9 +3,12 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     public int itemNum = 0;
+    private bool shopCD = false;
 
     private void OnTriggerStay2D(Collider2D collision) {
-        if(Input.GetButton("Submit")) {
+        if(Input.GetButton("Submit") && shopCD == false) {
+            shopCD = true;
+            Invoke(nameof(EndCD), 0.5f);
             switch(itemNum) {
                 case 0:
                     if(Manager.chips >= 50) {
@@ -51,5 +54,9 @@ public class Shop : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private void EndCD() {
+        shopCD = false;
     }
 }

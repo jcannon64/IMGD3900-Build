@@ -3,7 +3,7 @@ using UnityEngine;
 public class RatSpawner : MonoBehaviour
 {
     public GameObject prefab;
-    private int max = 3;
+    public int max = 3;
 
     private void Start() {
         Spawn();
