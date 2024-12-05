@@ -1,12 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
     public GameObject player;
     public GameObject cardDrop;
     public GameObject sign;
-    
+
     private SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
     //public Sprite[] runSprites;
@@ -22,77 +23,97 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 1f;
     public float jumpStrength = 1f;
     public float health = 3f;
+    public float MaxHealth;
     public float damage = 1f;
     private bool grounded;
-    private bool knockback= false;
+    private bool knockback = false;
     public TMP_Text healthText;
 
-    private void Awake() {
+    [SerializeField] HealthBar healthBar;
+    //private HealthBar healthBar;
+
+    private void Awake()
+    {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         results = new Collider2D[4];
+        healthBar = GetComponentInChildren<HealthBar>();
+        MaxHealth = health;
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         //InvokeRepeating(nameof(AnimateSprite), 1f/20f, 1f/20f);
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         CancelInvoke();
     }
 
-    private void CheckCollision() {
+    private void CheckCollision()
+    {
         grounded = false;
-        
+
         Vector2 size = collider.bounds.size;
         size.y += 0.1f;
-        
+
         int amount = Physics2D.OverlapBoxNonAlloc(transform.position, size, 0f, results);
 
-        for(int i = 0; i < amount; i++) {
+        for (int i = 0; i < amount; i++)
+        {
             GameObject hit = results[i].gameObject;
-            if(hit.layer == LayerMask.NameToLayer("Ground")) {
+            if (hit.layer == LayerMask.NameToLayer("Ground"))
+            {
                 grounded = hit.transform.position.y < (transform.position.y - 0.5f);
                 Physics2D.IgnoreCollision(collider, results[i], !grounded);
             }
         }
     }
 
-    private void Update() {
+    private void Update()
+    {
         CheckCollision();
 
         healthText.SetText(health.ToString());
-        
+
         direction += Physics2D.gravity * Time.deltaTime;
 
         float playerLocation = player.transform.position.x - transform.position.x;
-        if(knockback) {
+        if (knockback)
+        {
             direction.x = moveSpeed * 5 * -rigidbody.transform.right.x / rigidbody.mass;
         }
-        else if(playerLocation < 0) {
+        else if (playerLocation < 0)
+        {
             direction.x = -moveSpeed;
         }
         else direction.x = moveSpeed;
 
-        if(grounded) {
+        if (grounded)
+        {
             direction.y = Mathf.Max(direction.y, -1f);
         }
 
-        if(knockback) {
+        if (knockback)
+        {
 
         }
-        else if(direction.x > 0f) {
+        else if (direction.x > 0f)
+        {
             transform.eulerAngles = Vector3.zero;
             healthText.transform.eulerAngles = Vector3.zero;
         }
-        else if(direction.x < 0f) {
+        else if (direction.x < 0f)
+        {
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
             healthText.transform.eulerAngles = Vector3.zero;
         }
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         rigidbody.MovePosition(rigidbody.position + direction * Time.fixedDeltaTime);
     }
 
@@ -112,37 +133,47 @@ public class Enemy : MonoBehaviour
         }
     }*/
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Hitbox")) {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Hitbox"))
+        {
             knockback = true;
             Invoke(nameof(EndKB), 0.25f);
             TakeDamage(FindAnyObjectByType<Player>().damage);
             Destroy(collision.gameObject);
         }
-        else if(collision.gameObject.CompareTag("Card")) {
+        else if (collision.gameObject.CompareTag("Card"))
+        {
             TakeDamage(FindAnyObjectByType<Player>().damage);
             Destroy(collision.gameObject);
         }
-        else if(collision.gameObject.CompareTag("Explosion")) {
+        else if (collision.gameObject.CompareTag("Explosion"))
+        {
             TakeDamage(10);
-            if(Manager.diamondsUpgrade == true) {
+            if (Manager.diamondsUpgrade == true)
+            {
                 knockback = true;
                 Invoke(nameof(EndKB), 0.25f);
             }
         }
-        else if(collision.gameObject.CompareTag("Player")) {
+        else if (collision.gameObject.CompareTag("Player"))
+        {
             FindAnyObjectByType<Player>().TakeDamage(damage);
         }
     }
 
-    public void TakeDamage(float damage) {
+    public void TakeDamage(float damage)
+    {
         health -= damage;
+        healthBar.UpdateHealthBar(health, MaxHealth);
         AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
         AudioSource hurt = sounds[0];
         hurt.Play();
 
-        if(health <= 0) {
-            if(gameObject.CompareTag("Security")) {
+        if (health <= 0)
+        {
+            if (gameObject.CompareTag("Security"))
+            {
                 Instantiate(cardDrop, transform.position, Quaternion.identity);
                 FindAnyObjectByType<Player>().GainChips(100);
             }
@@ -151,16 +182,18 @@ public class Enemy : MonoBehaviour
             FindAnyObjectByType<Player>().KillReduction();
             FindAnyObjectByType<SignToggle>().toggle();
         }
-        
+
         spriteRenderer.sprite = sprites[1];
         Invoke(nameof(normalizeSprite), 0.25f);
     }
 
-    private void normalizeSprite() {
+    private void normalizeSprite()
+    {
         spriteRenderer.sprite = sprites[0];
     }
 
-    private void EndKB() {
+    private void EndKB()
+    {
         knockback = false;
     }
 }
