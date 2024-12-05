@@ -1,0 +1,1317 @@
+fileFormatVersion: 2
+guid: 63174c618de339944952ca1c01f82d2c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5512189504481001039
+    second: Dimond_Explosion-5.png_0
+  - first:
+      213: 7499410249516866248
+    second: Dimond_Explosion-5.png_1
+  - first:
+      213: -936665796423293090
+    second: Dimond_Explosion-5.png_2
+  - first:
+      213: -2236486787434789809
+    second: Dimond_Explosion-5.png_3
+  - first:
+      213: 6619025031257516743
+    second: Dimond_Explosion-5.png_4
+  - first:
+      213: 7266354796024433659
+    second: Dimond_Explosion-5.png_5
+  - first:
+      213: 4201310927584362827
+    second: Dimond_Explosion-5.png_6
+  - first:
+      213: 1444064752210427894
+    second: Dimond_Explosion-5.png_7
+  - first:
+      213: 2091752636517176428
+    second: Dimond_Explosion-5.png_8
+  - first:
+      213: 4878307052204252905
+    second: Dimond_Explosion-5.png_9
+  - first:
+      213: -560125408265349116
+    second: Dimond_Explosion-5.png_10
+  - first:
+      213: -7171042488650591392
+    second: Dimond_Explosion-5.png_11
+  - first:
+      213: 6211098572943765335
+    second: Dimond_Explosion-5.png_12
+  - first:
+      213: -5535187794289919925
+    second: Dimond_Explosion-5.png_13
+  - first:
+      213: -6032077664367160477
+    second: Dimond_Explosion-5.png_14
+  - first:
+      213: 5025493980314125512
+    second: Dimond_Explosion-5.png_15
+  - first:
+      213: 8805528359109378218
+    second: Dimond_Explosion-5.png_16
+  - first:
+      213: 58682461287157113
+    second: Dimond_Explosion-5.png_17
+  - first:
+      213: 8579146728206730859
+    second: Dimond_Explosion-5.png_18
+  - first:
+      213: -4415474946687197108
+    second: Dimond_Explosion-5.png_19
+  - first:
+      213: -5626817463973314577
+    second: Dimond_Explosion-5.png_20
+  - first:
+      213: -221241443698231809
+    second: Dimond_Explosion-5.png_21
+  - first:
+      213: -6640553860786309190
+    second: Dimond_Explosion-5.png_22
+  - first:
+      213: -4183371521198345801
+    second: Dimond_Explosion-5.png_23
+  - first:
+      213: -2301888999473803341
+    second: Dimond_Explosion-5.png_24
+  - first:
+      213: 5295473082187433367
+    second: Dimond_Explosion-5.png_25
+  - first:
+      213: 4059458805371409181
+    second: Dimond_Explosion-5.png_26
+  - first:
+      213: -1503031889872012465
+    second: Dimond_Explosion-5.png_27
+  - first:
+      213: -6164597697964315865
+    second: Dimond_Explosion-5.png_28
+  - first:
+      213: 3188470896975764408
+    second: Dimond_Explosion-5.png_29
+  - first:
+      213: 2959655777479541879
+    second: Dimond_Explosion-5.png_30
+  - first:
+      213: 8525265944651274960
+    second: Dimond_Explosion-5.png_31
+  - first:
+      213: -7873232745963324432
+    second: Dimond_Explosion-5.png_32
+  - first:
+      213: 5819301267719220292
+    second: Dimond_Explosion-5.png_33
+  - first:
+      213: 1012833892428944184
+    second: Dimond_Explosion-5.png_34
+  - first:
+      213: -5596787014023238691
+    second: Dimond_Explosion-5.png_35
+  - first:
+      213: 5058204306278899702
+    second: Dimond_Explosion-5.png_36
+  - first:
+      213: -1299095773701283052
+    second: Dimond_Explosion-5.png_37
+  - first:
+      213: -8987505264855336415
+    second: Dimond_Explosion-5.png_38
+  - first:
+      213: -6182571428947119472
+    second: Dimond_Explosion-5.png_39
+  - first:
+      213: 7353692769195185535
+    second: Dimond_Explosion-5.png_40
+  - first:
+      213: -6666649226635994521
+    second: Dimond_Explosion-5.png_41
+  - first:
+      213: 2943369393461107613
+    second: Dimond_Explosion-5.png_42
+  - first:
+      213: 8748382911880464470
+    second: Dimond_Explosion-5.png_43
+  - first:
+      213: -7957683548654480487
+    second: Dimond_Explosion-5.png_44
+  - first:
+      213: -5153078654353206605
+    second: Dimond_Explosion-5.png_45
+  - first:
+      213: 6966019271937499780
+    second: Dimond_Explosion-5.png_46
+  - first:
+      213: -5159193735145327566
+    second: Dimond_Explosion-5.png_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_0
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 1724
+        width: 77
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b106cab9d4c083b0800000000000000
+      internalID: -5512189504481001039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_1
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 1709
+        width: 137
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca506b63e1431860800000000000000
+      internalID: 7499410249516866248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1649
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e576eeabb6b4003f0800000000000000
+      internalID: -936665796423293090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_3
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1664
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f444812cd1766f0e0800000000000000
+      internalID: -2236486787434789809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_4
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1664
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cae58362308bdb50800000000000000
+      internalID: 6619025031257516743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_5
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1604
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb0efc203747d460800000000000000
+      internalID: 7266354796024433659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_6
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1604
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4102a5770e0e4a30800000000000000
+      internalID: 4201310927584362827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_7
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1604
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ff3a2cbd395a0410800000000000000
+      internalID: 1444064752210427894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_8
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1544
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64d799b0f5670d10800000000000000
+      internalID: 2091752636517176428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_9
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1589
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eedae7ea6a33b340800000000000000
+      internalID: 4878307052204252905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_10
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1559
+        width: 62
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4085caaa8e80a38f0800000000000000
+      internalID: -560125408265349116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_11
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 1559
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0639fb2b9d65b7c90800000000000000
+      internalID: -7171042488650591392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_12
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1499
+        width: 167
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75faf398e31423650800000000000000
+      internalID: 6211098572943765335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_13
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1454
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48754c17001f23b0800000000000000
+      internalID: -5535187794289919925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_14
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1454
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363d3d5d251c94ca0800000000000000
+      internalID: -6032077664367160477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_15
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 1514
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4cc7d16242eb540800000000000000
+      internalID: 5025493980314125512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_16
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1514
+        width: 122
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa0c7509365833a70800000000000000
+      internalID: 8805528359109378218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_17
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 1409
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d019b336b70d000800000000000000
+      internalID: 58682461287157113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_18
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1349
+        width: 32
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6687babe704f0770800000000000000
+      internalID: 8579146728206730859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_19
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 1349
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40a2102ee419b2c0800000000000000
+      internalID: -4415474946687197108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_20
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1349
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feff7e3245789e1b0800000000000000
+      internalID: -5626817463973314577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_21
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 1349
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5b5c2441efdecf0800000000000000
+      internalID: -221241443698231809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_22
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1229
+        width: 137
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab7bbff527308d3a0800000000000000
+      internalID: -6640553860786309190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_23
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1184
+        width: 62
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1bc7314cda1f5c0800000000000000
+      internalID: -4183371521198345801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_24
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1199
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf0cf1a62c0e00e0800000000000000
+      internalID: -2301888999473803341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_25
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 1019
+        width: 107
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 795cc6d26bc4d7940800000000000000
+      internalID: 5295473082187433367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_26
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1034
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d139e7a8648165830800000000000000
+      internalID: 4059458805371409181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_27
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1034
+        width: 122
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b3816a578242be0800000000000000
+      internalID: -1503031889872012465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_28
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1064
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b65ad1e03f27aa0800000000000000
+      internalID: -6164597697964315865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_29
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 1049
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb59e63369bf3c20800000000000000
+      internalID: 3188470896975764408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_30
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 989
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774c91aaf3fc21920800000000000000
+      internalID: 2959655777479541879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_31
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 899
+        width: 62
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da9ca63534df4670800000000000000
+      internalID: 8525265944651274960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_32
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 869
+        width: 77
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fbf1ee1888acb290800000000000000
+      internalID: -7873232745963324432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_33
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 869
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c6267cbaf42c050800000000000000
+      internalID: 5819301267719220292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_34
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 809
+        width: 47
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83314b61f0f4e0e00800000000000000
+      internalID: 1012833892428944184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_35
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 809
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb20a12dd73452b0800000000000000
+      internalID: -5596787014023238691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_36
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 809
+        width: 77
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ffda1d540a523640800000000000000
+      internalID: 5058204306278899702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_37
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 809
+        width: 92
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413e257d64fa8fde0800000000000000
+      internalID: -1299095773701283052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_38
+      rect:
+        serializedVersion: 2
+        x: 1499
+        y: 794
+        width: 77
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12a38575497f54380800000000000000
+      internalID: -8987505264855336415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_39
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 749
+        width: 167
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 092b023ca08133aa0800000000000000
+      internalID: -6182571428947119472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_40
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 779
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75dc3fac909d0660800000000000000
+      internalID: 7353692769195185535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_41
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 764
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a9a3c89dd4b73a0800000000000000
+      internalID: -6666649226635994521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_42
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 719
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b91046ed2f8d820800000000000000
+      internalID: 2943369393461107613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_43
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 674
+        width: 62
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6588bbd48ef786970800000000000000
+      internalID: 8748382911880464470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_44
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 689
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993da7f59f0a09190800000000000000
+      internalID: -7957683548654480487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_45
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 644
+        width: 107
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b211ab14469c78b0800000000000000
+      internalID: -5153078654353206605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_46
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 644
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4822c5ace954ca060800000000000000
+      internalID: 6966019271937499780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dimond_Explosion-5.png_47
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 584
+        width: 122
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234fd39e1acd668b0800000000000000
+      internalID: -5159193735145327566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

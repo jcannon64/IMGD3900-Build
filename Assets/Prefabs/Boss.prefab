@@ -123,10 +123,10 @@ GameObject:
   - component: {fileID: 3174371053556133887}
   - component: {fileID: 3775190586322030243}
   - component: {fileID: 404857596605302062}
-  - component: {fileID: -7762047909405561096}
+  - component: {fileID: 7770669986566138344}
   - component: {fileID: -2550900067783139703}
   m_Layer: 7
-  m_Name: Hearts Enemy
+  m_Name: Boss
   m_TagString: Security
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3486548652979972935}
@@ -262,7 +262,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
@@ -277,7 +277,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-7762047909405561096
+--- !u!114 &7770669986566138344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,20 +286,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2343087396295615573}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65eb9b3c1987a749ab2cc5620ce7f8a, type: 3}
+  m_Script: {fileID: 11500000, guid: b5f40ab1e0b813543a4bc447fd2f4b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 517081264861855813, guid: 3a57e7793ca952b4689b86dcb495ea0b, type: 3}
-  cardDrop: {fileID: 1686339377347209698, guid: 7e2e91cadfdc824429d6806137e39c98, type: 3}
+  player: {fileID: 0}
   sign: {fileID: 0}
   sprites:
-  - {fileID: -5505311132468476190, guid: 8e1230fc97d48004390e3148e9076dde, type: 3}
-  - {fileID: 3049144056412195378, guid: 2623c26c0149eb9448b6da6c01e1254a, type: 3}
-  moveSpeed: 3.5
+  - {fileID: 0}
+  - {fileID: 0}
+  moveSpeed: 2.5
   jumpStrength: 25
-  health: 100
-  MaxHealth: 0
-  damage: 25
+  health: 250
+  MaxHealth: 250
+  damage: 35
   healthText: {fileID: 1959699768231166947}
   healthBar: {fileID: 0}
 --- !u!82 &-2550900067783139703
@@ -457,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98490566, g: 0.21791315, b: 0.17653958, a: 1}
+  m_Color: {r: 1, g: 0.88235295, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -688,8 +687,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278453495
-  m_fontColor: {r: 0.9686275, g: 0.015686275, b: 0.015686275, a: 1}
+    rgba: 4278245621
+  m_fontColor: {r: 0.9607844, g: 0.8470589, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

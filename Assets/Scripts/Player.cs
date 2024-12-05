@@ -73,7 +73,11 @@ public class Player : MonoBehaviour
 
         for(int i = 0; i < amount; i++) {
             GameObject hit = results[i].gameObject;
-            if(hit.layer == LayerMask.NameToLayer("Ground") || hit.layer == LayerMask.NameToLayer("Enemy")) {
+            if(hit.layer == LayerMask.NameToLayer("Ground")) {
+                grounded = hit.transform.position.y < (transform.position.y - 0.5f);
+                Physics2D.IgnoreCollision(collider, results[i], !grounded);
+            }
+            else if(hit.layer == LayerMask.NameToLayer("Enemy")) {
                 grounded = hit.transform.position.y < (transform.position.y - 0.5f);
             }
         }
@@ -81,13 +85,14 @@ public class Player : MonoBehaviour
 
     private void Update() {
         CheckCollision();
-        if(StageStart == true)
-        {
+
+        if(StageStart == true) {
             killCount = 7;
             StageStart= false;
         }
         
-        UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + " Enemies remaining: " + killCount.ToString());
+        UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + "Enemies remaining: " + killCount.ToString());
+        
         switch(weapon) {
             case 1:
                 SuitText.SetText("Spades " + " Ammo: " + Manager.spadesAmmo);
@@ -266,11 +271,6 @@ public class Player : MonoBehaviour
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource hurt = sounds[3];
             hurt.Play();
-            
-            /*if(Manager.health <= 0) {
-                enabled = false;
-                FindAnyObjectByType<GameManager>().LevelFailed();
-            }*/
         }
         else if(collision.gameObject.CompareTag("To Level")) {
             FindAnyObjectByType<GameManager>().LoadLevel(1);
@@ -331,8 +331,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public int sendKillCount()
-    {
+    public int sendKillCount() {
         return killCount;
     }
 }

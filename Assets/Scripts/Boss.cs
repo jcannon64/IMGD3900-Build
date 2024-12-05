@@ -2,10 +2,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Boss : MonoBehaviour
 {
     public GameObject player;
-    public GameObject cardDrop;
     public GameObject sign;
 
     private SpriteRenderer spriteRenderer;
@@ -26,7 +25,6 @@ public class Enemy : MonoBehaviour
     public float MaxHealth;
     public float damage = 1f;
     private bool grounded;
-    private bool knockback = false;
     public TMP_Text healthText;
 
     [SerializeField] HealthBar healthBar;
@@ -78,10 +76,7 @@ public class Enemy : MonoBehaviour
 
         float playerLocation = player.transform.position.x - transform.position.x;
         float playerHeight = player.transform.position.y - transform.position.y;
-        if(knockback) {
-            direction.x = moveSpeed * 5 * -rigidbody.transform.right.x / rigidbody.mass;
-        }
-        else if(grounded && playerHeight > 6.5 && playerLocation < 2.5 && playerLocation > -2.5) {
+        if(grounded && playerHeight > 6.5 && playerLocation < 3 && playerLocation > -3) {
             direction = Vector2.up * jumpStrength;
         }
         else if(playerLocation < 0) {
@@ -96,8 +91,7 @@ public class Enemy : MonoBehaviour
             direction.y = Mathf.Max(direction.y, -1f);
         }
 
-        if(knockback) {}
-        else if(direction.x > 0f) {
+        if(direction.x > 0f) {
             transform.eulerAngles = Vector3.zero;
             healthText.transform.eulerAngles = Vector3.zero;
             healthBar.transform.eulerAngles = Vector3.zero;
@@ -131,8 +125,6 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Hitbox")) {
-            knockback = true;
-            Invoke(nameof(EndKB), 0.25f);
             TakeDamage(FindAnyObjectByType<Player>().damage);
             Destroy(collision.gameObject);
         }
@@ -142,10 +134,6 @@ public class Enemy : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Explosion")) {
             TakeDamage(10);
-            if (Manager.diamondsUpgrade == true) {
-                knockback = true;
-                Invoke(nameof(EndKB), 0.25f);
-            }
         }
         else if(collision.gameObject.CompareTag("Player")) {
             FindAnyObjectByType<Player>().TakeDamage(damage);
@@ -159,12 +147,8 @@ public class Enemy : MonoBehaviour
         AudioSource hurt = sounds[0];
         hurt.Play();
 
-        if (health <= 0) {
-            if (gameObject.CompareTag("Security")) {
-                Instantiate(cardDrop, transform.position, Quaternion.identity);
-                FindAnyObjectByType<Player>().GainChips(100);
-            }
-            else FindAnyObjectByType<Player>().GainChips(50);
+        if(health <= 0) {
+            FindAnyObjectByType<Player>().GainChips(500);
             gameObject.SetActive(false);
             FindAnyObjectByType<Player>().KillReduction();
             FindAnyObjectByType<SignToggle>().toggle();
@@ -181,9 +165,5 @@ public class Enemy : MonoBehaviour
 
     private void normalizeSprite() {
         spriteRenderer.sprite = sprites[0];
-    }
-
-    private void EndKB() {
-        knockback = false;
     }
 }
