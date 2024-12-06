@@ -13,4 +13,6 @@ public static class Manager
     public static bool heartsUpgrade = false;
     public static bool clubsUpgrade = false;
     public static bool diamondsUpgrade = false;
+    public static int loops = 0;
+    public static int level = 3;
 }

@@ -20,11 +20,13 @@ public class GameManager : MonoBehaviour
         Manager.heartsUpgrade = false;
         Manager.clubsUpgrade = false;
         Manager.diamondsUpgrade = false;
+        Manager.loops = 0;
         LoadLevel(3);
     }
 
     public void LoadLevel(int index) {
         level = index;
+        //Manager.level = index;
 
         Camera camera = Camera.main;
         if(camera != null) {
@@ -44,6 +46,10 @@ public class GameManager : MonoBehaviour
     }
 
     public void LevelComplete() {
+        if(level == 6) {
+            Manager.loops++;
+        }
+        
         int nextLevel = level + 1;
         if(nextLevel < SceneManager.sceneCountInBuildSettings) {
             LoadLevel(nextLevel);

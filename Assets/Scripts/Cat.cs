@@ -69,10 +69,10 @@ public class Cat : MonoBehaviour
         if(healCharges <= 0) {
             direction.x = -moveSpeed * 2.5f;
         }
-        else if(targetLocation < 1.5) {
+        else if(targetLocation < 2) {
             direction.x = -moveSpeed;
         }
-        else if(targetLocation > 1.5) {
+        else if(targetLocation > 2) {
             direction.x = moveSpeed;
         }
         else direction.x = 0;
@@ -113,6 +113,8 @@ public class Cat : MonoBehaviour
         if(collision.gameObject == target && healCharges > 0 && cooldown == false) {
             if(target == player) {
                 collision.gameObject.GetComponent<Player>().TakeDamage(-25);
+                AudioSource meow = gameObject.GetComponent<AudioSource>();
+                meow.Play();
                 healCharges--;
                 cooldown = true;
                 Invoke(nameof(EndCD), 2f);
@@ -126,6 +128,8 @@ public class Cat : MonoBehaviour
                     collision.gameObject.GetComponent<Boss>().Heal(25);
                 }
                 else collision.gameObject.GetComponent<Enemy>().Heal(25);
+                AudioSource meow = gameObject.GetComponent<AudioSource>();
+                meow.Play();
                 healCharges--;
                 cooldown = true;
                 Invoke(nameof(EndCD), 2f);

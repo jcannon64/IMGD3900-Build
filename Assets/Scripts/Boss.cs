@@ -38,6 +38,8 @@ public class Boss : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         results = new Collider2D[4];
+        damage = damage + (20 * Manager.loops);
+        health = health + (50 * Manager.loops);
         healthBar = GetComponentInChildren<HealthBar>();
         MaxHealth = health;
     }
@@ -179,11 +181,11 @@ public class Boss : MonoBehaviour
         moveSpeed = 0;
         Instantiate(spawner, new Vector3(transform.position.x + (-15f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
         Instantiate(spawner, new Vector3(transform.position.x + (15f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
-        Invoke(nameof(StartPhaseTwo), 7.5f);
+        Invoke(nameof(StartPhaseTwo), 10f);
     }
 
     private void StartPhaseTwo() {
         Destroy(platform);
-        moveSpeed = 2.5f;
+        moveSpeed = 3f;
     }
 }

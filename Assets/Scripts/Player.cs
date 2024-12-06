@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     public Sprite clubs;
     public Sprite diamonds;
     public int killCount = 7;
+    private int currLevel;
 
     private bool grounded;
     private bool attacking = false;
@@ -267,9 +268,14 @@ public class Player : MonoBehaviour
             hurt.Play();
         }
         else if(collision.gameObject.CompareTag("To Level")) {
-            FindAnyObjectByType<GameManager>().LoadLevel(3);
+            FindAnyObjectByType<GameManager>().LoadLevel(Manager.level + 1);
         }
-        else if(collision.gameObject.CompareTag("To Shop")) {
+        else if(collision.gameObject.CompareTag("To Shop") && killCount == 0) {
+            Manager.level = FindAnyObjectByType<GameManager>().currLevel();
+            if(Manager.level == 6) {
+                Manager.loops++;
+                Manager.level = 2;
+            }
             FindAnyObjectByType<GameManager>().LoadLevel(2);
         }
         else if(collision.gameObject.CompareTag("To Next Area")) {

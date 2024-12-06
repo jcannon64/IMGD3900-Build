@@ -24,7 +24,10 @@ public class SpadesCards : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
-            other.GetComponent<Enemy>().TakeDamage(25);
+            if(other.gameObject.CompareTag("Boss")) {
+                other.GetComponent<Boss>().TakeDamage(25);
+            }
+            else other.GetComponent<Enemy>().TakeDamage(25);
         }
     }
 }

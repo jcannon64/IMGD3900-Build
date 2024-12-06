@@ -10,7 +10,7 @@ public class ClubsCards : MonoBehaviour
         Invoke(nameof(Teleport), 1.25f);
     }
 
-    void Update() {
+    void FixedUpdate() {
         transform.Rotate(Vector3.back);
     }
 

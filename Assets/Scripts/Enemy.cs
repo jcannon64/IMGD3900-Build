@@ -37,6 +37,14 @@ public class Enemy : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         results = new Collider2D[4];
+        if(gameObject.CompareTag("Security")) {
+            damage = damage + (10 * Manager.loops);
+            health = health + (25 * Manager.loops);
+        }
+        else {
+            damage = damage + (5 * Manager.loops);
+            health = health + (10 * Manager.loops);
+        }
         healthBar = GetComponentInChildren<HealthBar>();
         MaxHealth = health;
     }
