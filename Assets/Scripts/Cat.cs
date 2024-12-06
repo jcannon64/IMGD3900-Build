@@ -122,7 +122,10 @@ public class Cat : MonoBehaviour
                 PickTarget();
             }
             else {
-                collision.gameObject.GetComponent<Enemy>().Heal(25);
+                if(collision.gameObject.CompareTag("Boss")) {
+                    collision.gameObject.GetComponent<Boss>().Heal(25);
+                }
+                else collision.gameObject.GetComponent<Enemy>().Heal(25);
                 healCharges--;
                 cooldown = true;
                 Invoke(nameof(EndCD), 2f);
@@ -133,7 +136,11 @@ public class Cat : MonoBehaviour
 
     private void PickTarget() {
         Object enemy = FindAnyObjectByType<Enemy>();
-        if(enemy == null) {
+        Object boss = FindAnyObjectByType<Boss>();
+        if(boss != null) {
+            target = boss.GameObject();
+        }
+        else if(enemy == null) {
             target = player;
         }
         else target = enemy.GameObject();

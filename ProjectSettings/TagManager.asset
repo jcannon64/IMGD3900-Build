@@ -21,6 +21,7 @@ TagManager:
   - Clubs
   - Diamonds
   - Card
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -31,7 +32,7 @@ TagManager:
   - Ground
   - Enemy
   - Player
-  - 
+  - Cat
   - 
   - 
   - 

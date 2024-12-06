@@ -1668,7 +1668,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1542852222
+--- !u!1 &1505825057
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1676,29 +1676,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1542852224}
-  - component: {fileID: 1542852223}
+  - component: {fileID: 1505825059}
+  - component: {fileID: 1505825058}
   m_Layer: 0
-  m_Name: IntoFray-AudioMix
+  m_Name: Disruption
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1542852223
+--- !u!82 &1505825058
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542852222}
+  m_GameObject: {fileID: 1505825057}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ceda54feed3785b47918164f3b55092b, type: 3}
-  m_Resource: {fileID: 8300000, guid: ceda54feed3785b47918164f3b55092b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b5e3773c148ecad4d878bebcc787946f, type: 3}
+  m_Resource: {fileID: 8300000, guid: b5e3773c148ecad4d878bebcc787946f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.075
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1782,13 +1782,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!4 &1542852224
+--- !u!4 &1505825059
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1542852222}
+  m_GameObject: {fileID: 1505825057}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -2140,8 +2140,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 170}
-  m_SizeDelta: {x: 200, y: 75}
+  m_AnchoredPosition: {x: -137.5, y: -190}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1706708874
 MonoBehaviour:
@@ -2562,6 +2562,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2112238173}
     - target: {fileID: 708991816685813114, guid: 3a57e7793ca952b4689b86dcb495ea0b, type: 3}
+      propertyPath: killCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 708991816685813114, guid: 3a57e7793ca952b4689b86dcb495ea0b, type: 3}
       propertyPath: healthText
       value: 
       objectReference: {fileID: 1706708874}
@@ -2626,7 +2630,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 1584206102446841505}
   - {fileID: 490339802}
-  - {fileID: 1542852224}
   - {fileID: 783757681}
   - {fileID: 842353863}
   - {fileID: 826908560}
@@ -2645,3 +2648,4 @@ SceneRoots:
   - {fileID: 116024671}
   - {fileID: 853913709}
   - {fileID: 1708764184}
+  - {fileID: 1505825059}

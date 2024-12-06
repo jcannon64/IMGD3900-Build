@@ -11,7 +11,6 @@ public class SpadesCards : MonoBehaviour
     }
 
     void Update() {
-        transform.Rotate(Vector3.back);
         if(Manager.spadesUpgrade) {
             collider.isTrigger = true;
         }
@@ -19,6 +18,7 @@ public class SpadesCards : MonoBehaviour
     }
     
     void FixedUpdate() {
+        transform.Rotate(Vector3.back);
         gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector3(-10f * playerDirection, 0, 0));
     }
 

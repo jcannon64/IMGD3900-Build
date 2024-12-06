@@ -34,7 +34,6 @@ public class Player : MonoBehaviour
     public Sprite clubs;
     public Sprite diamonds;
     public int killCount = 7;
-    public bool StageStart = true;
 
     private bool grounded;
     private bool attacking = false;
@@ -85,11 +84,6 @@ public class Player : MonoBehaviour
 
     private void Update() {
         CheckCollision();
-
-        if(StageStart == true) {
-            killCount = 7;
-            StageStart= false;
-        }
         
         UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + "Enemies remaining: " + killCount.ToString());
         
@@ -267,25 +261,26 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat")) {
+        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("Boss")) {
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource hurt = sounds[3];
             hurt.Play();
         }
         else if(collision.gameObject.CompareTag("To Level")) {
-            FindAnyObjectByType<GameManager>().LoadLevel(1);
+            FindAnyObjectByType<GameManager>().LoadLevel(3);
         }
         else if(collision.gameObject.CompareTag("To Shop")) {
-            FindAnyObjectByType<GameManager>().LoadLevel(3);
+            FindAnyObjectByType<GameManager>().LoadLevel(2);
         }
         else if(collision.gameObject.CompareTag("To Next Area")) {
             if(killCount == 0) {
-                if(FindAnyObjectByType<GameManager>().currLevel() == 1) {
+                FindAnyObjectByType<GameManager>().LevelComplete();
+                /*if(FindAnyObjectByType<GameManager>().currLevel() == 1) {
                     FindAnyObjectByType<GameManager>().LoadLevel(4);
                 }
                 else if(FindAnyObjectByType<GameManager>().currLevel() == 4) {
                     FindAnyObjectByType<GameManager>().LoadLevel(1);
-                }
+                }*/
             }
         }
         else if(collision.gameObject.CompareTag("Hearts Ammo")) {

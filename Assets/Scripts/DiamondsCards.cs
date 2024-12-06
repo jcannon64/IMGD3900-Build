@@ -4,12 +4,12 @@ public class DiamondsCards : MonoBehaviour
 {
     public GameObject explosion;
 
-    void Update() {
+    void FixedUpdate() {
         transform.Rotate(Vector3.back);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat")) {
+        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("Boss")) {
             Instantiate(explosion, transform.position, Quaternion.identity);
         }
     }

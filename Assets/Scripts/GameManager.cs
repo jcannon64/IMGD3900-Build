@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         Manager.heartsUpgrade = false;
         Manager.clubsUpgrade = false;
         Manager.diamondsUpgrade = false;
-        LoadLevel(1);
+        LoadLevel(3);
     }
 
     public void LoadLevel(int index) {
@@ -43,18 +43,17 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(level);
     }
 
-    /*public void LevelComplete() {
+    public void LevelComplete() {
         int nextLevel = level + 1;
         if(nextLevel < SceneManager.sceneCountInBuildSettings) {
             LoadLevel(nextLevel);
         }
-        else 
-        {
-            LoadLevel(1);
+        else {
+            LoadLevel(3);
         }
-    }*/
+    }
 
     public void LevelFailed() {
-        LoadLevel(2);
+        LoadLevel(1);
     }
 }

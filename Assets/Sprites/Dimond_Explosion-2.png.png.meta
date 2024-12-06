@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dimond_Explosion-2.png_0: 6919527200536843681
+      Dimond_Explosion-2.png_1: 6243788284758665434
+      Dimond_Explosion-2.png_2: 4964232593135234747
+      Dimond_Explosion-2.png_3: 5955129073218141208
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
