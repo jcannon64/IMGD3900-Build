@@ -271,6 +271,7 @@ public class Player : MonoBehaviour
             FindAnyObjectByType<GameManager>().LoadLevel(Manager.level + 1);
         }
         else if(collision.gameObject.CompareTag("To Shop") && killCount == 0) {
+            TakeDamage(-25);
             Manager.level = FindAnyObjectByType<GameManager>().currLevel();
             if(Manager.level == 6) {
                 Manager.loops++;
@@ -280,13 +281,8 @@ public class Player : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("To Next Area")) {
             if(killCount == 0) {
+                TakeDamage(-25);
                 FindAnyObjectByType<GameManager>().LevelComplete();
-                /*if(FindAnyObjectByType<GameManager>().currLevel() == 1) {
-                    FindAnyObjectByType<GameManager>().LoadLevel(4);
-                }
-                else if(FindAnyObjectByType<GameManager>().currLevel() == 4) {
-                    FindAnyObjectByType<GameManager>().LoadLevel(1);
-                }*/
             }
         }
         else if(collision.gameObject.CompareTag("Hearts Ammo")) {
@@ -323,12 +319,6 @@ public class Player : MonoBehaviour
         killCount--;
         if(killCount < 0) {
             killCount = 0;
-        }
-    }
-
-    public void NextStage() {
-        if(killCount == 0) {
-            //display the signs on the stage in respective locations, then change the edge of the map objects to go to respective areas
         }
     }
 

@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel(int index) {
         level = index;
-        //Manager.level = index;
 
         Camera camera = Camera.main;
         if(camera != null) {
@@ -36,8 +35,7 @@ public class GameManager : MonoBehaviour
         LoadScene();
     }
 
-    public int currLevel()
-    {
+    public int currLevel() {
         return level;
     }
 
@@ -51,7 +49,7 @@ public class GameManager : MonoBehaviour
         }
         
         int nextLevel = level + 1;
-        if(nextLevel < SceneManager.sceneCountInBuildSettings) {
+        if(nextLevel < SceneManager.sceneCountInBuildSettings - 1) {
             LoadLevel(nextLevel);
         }
         else {
