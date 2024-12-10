@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Boss Stage.unity
     guid: 13acaea7737df8840a4906b83dead214
   - enabled: 1
-    path: Assets/Scenes/Guide_Menue.unity
+    path: Assets/Scenes/Guide Menu.unity
     guid: b3bb8e3644e922844a534b182f617967
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
