@@ -45,50 +45,59 @@ public class Player : MonoBehaviour
     public GameObject glassHitbox, diamondsCard;
     public GameObject sign;
 
-    private void Awake() {
+    private void Awake()
+    {
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
         results = new Collider2D[4];
-        MaxHealth = (int) health;
+        MaxHealth = (int)health;
 
         attackSprites = punchSprites;
     }
 
-    private void OnEnable() {
-        InvokeRepeating(nameof(AnimateSprite), 1f/20f, 1f/20f);
+    private void OnEnable()
+    {
+        InvokeRepeating(nameof(AnimateSprite), 1f / 20f, 1f / 20f);
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         CancelInvoke();
     }
 
-    private void CheckCollision() {
+    private void CheckCollision()
+    {
         grounded = false;
-        
+
         Vector2 size = collider.bounds.size;
         size.y += 0.1f;
-        
+
         int amount = Physics2D.OverlapBoxNonAlloc(transform.position, size, 0f, results);
 
-        for(int i = 0; i < amount; i++) {
+        for (int i = 0; i < amount; i++)
+        {
             GameObject hit = results[i].gameObject;
-            if(hit.layer == LayerMask.NameToLayer("Ground")) {
+            if (hit.layer == LayerMask.NameToLayer("Ground"))
+            {
                 grounded = hit.transform.position.y < (transform.position.y - 0.5f);
                 Physics2D.IgnoreCollision(collider, results[i], !grounded);
             }
-            else if(hit.layer == LayerMask.NameToLayer("Enemy")) {
+            else if (hit.layer == LayerMask.NameToLayer("Enemy"))
+            {
                 grounded = hit.transform.position.y < (transform.position.y - 0.5f);
             }
         }
     }
 
-    private void Update() {
+    private void Update()
+    {
         CheckCollision();
-        
+
         UIText.SetText("Health: " + Manager.health.ToString() + "\n" + "Chips: " + Manager.chips.ToString() + "\n" + "Enemies remaining: " + killCount.ToString());
-        
-        switch(weapon) {
+
+        switch (weapon)
+        {
             case 1:
                 SuitText.SetText("Spades " + " Ammo: " + Manager.spadesAmmo);
                 cardArt.sprite = spades;
@@ -106,8 +115,9 @@ public class Player : MonoBehaviour
                 cardArt.sprite = diamonds;
                 break;
         }
-        
-        if(grounded && Input.GetButtonDown("Jump")) {
+
+        if (grounded && Input.GetButtonDown("Jump"))
+        {
             direction = Vector2.up * jumpStrength;
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource jump = sounds[0];
@@ -116,26 +126,32 @@ public class Player : MonoBehaviour
         else direction += Physics2D.gravity * Time.deltaTime;
 
         direction.x = Input.GetAxis("Horizontal") * moveSpeed;
-        if(grounded) {
+        if (grounded)
+        {
             direction.y = Mathf.Max(direction.y, -1f);
         }
 
-        if(direction.x > 0f) {
+        if (direction.x > 0f)
+        {
             transform.eulerAngles = Vector3.zero;
         }
-        else if(direction.x < 0f) {
+        else if (direction.x < 0f)
+        {
             transform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
 
         //left click to attack
-        if(!attacking && Input.GetButtonDown("Fire1")) {
+        if (!attacking && Input.GetButtonDown("Fire1"))
+        {
             spriteIndex = 0;
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource attack = sounds[1];
-            if(weapon == 3) {
+            if (weapon == 3)
+            {
                 attack = sounds[2];
             }
-            else if(weapon == 4) {
+            else if (weapon == 4)
+            {
                 attack = sounds[4];
             }
             attack.Play();
@@ -143,14 +159,17 @@ public class Player : MonoBehaviour
         }
 
         //right click to throw cards
-        if(Input.GetButtonDown("Fire2")) {
+        if (Input.GetButtonDown("Fire2"))
+        {
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource card = sounds[5];
-            
+
             GameObject newCard;
-            switch(weapon) {
+            switch (weapon)
+            {
                 case 1:
-                    if(Manager.spadesAmmo > 0) {
+                    if (Manager.spadesAmmo > 0)
+                    {
                         newCard = Instantiate(spadesCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
                         Manager.spadesAmmo -= 1;
@@ -158,7 +177,8 @@ public class Player : MonoBehaviour
                     }
                     break;
                 case 2:
-                    if(Manager.heartsAmmo > 0) {
+                    if (Manager.heartsAmmo > 0)
+                    {
                         newCard = Instantiate(heartsCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
                         Manager.heartsAmmo -= 1;
@@ -166,7 +186,8 @@ public class Player : MonoBehaviour
                     }
                     break;
                 case 3:
-                    if(Manager.clubsAmmo > 0) {
+                    if (Manager.clubsAmmo > 0)
+                    {
                         newCard = Instantiate(clubsCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
                         Manager.clubsAmmo -= 1;
@@ -174,7 +195,8 @@ public class Player : MonoBehaviour
                     }
                     break;
                 case 4:
-                    if(Manager.diamondsAmmo > 0) {
+                    if (Manager.diamondsAmmo > 0)
+                    {
                         newCard = Instantiate(diamondsCard, new Vector3(transform.position.x + (2f * transform.right.x), transform.position.y, transform.position.z), new Quaternion(0, 0, 90, 0));
                         newCard.GetComponent<Rigidbody2D>().AddForce(new Vector3(1000 * transform.right.x, 0, 0));
                         Manager.diamondsAmmo -= 1;
@@ -185,13 +207,16 @@ public class Player : MonoBehaviour
         }
 
         //left shift to swap weapons
-        if(Input.GetButtonDown("Fire3")) {
-            if(weapon >= 4) {
+        if (Input.GetButtonDown("Fire3"))
+        {
+            if (weapon >= 4)
+            {
                 weapon = 1;
             }
             else weapon++;
 
-            switch(weapon) {
+            switch (weapon)
+            {
                 case 1:
                     attackSprites = punchSprites;
                     break;
@@ -208,37 +233,46 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         rigidbody.MovePosition(rigidbody.position + direction * Time.fixedDeltaTime);
     }
 
-    private void AnimateSprite() {
-        if(attacking) {
+    private void AnimateSprite()
+    {
+        if (attacking)
+        {
             spriteIndex++;
-            
-            if(spriteIndex >= attackSprites.Length) {
+
+            if (spriteIndex >= attackSprites.Length)
+            {
                 spriteIndex = 0;
                 attacking = false;
             }
 
-            switch(weapon) {
+            switch (weapon)
+            {
                 case 1:
-                    if(spriteIndex == 7) {
+                    if (spriteIndex == 7)
+                    {
                         Instantiate(punchHitbox, new Vector3(transform.position.x + (1.5f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
                     }
                     break;
                 case 2:
-                    if(spriteIndex == 5) {
+                    if (spriteIndex == 5)
+                    {
                         Instantiate(daggerHitbox, new Vector3(transform.position.x + (1.5f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
                     }
                     break;
                 case 3:
-                    if(spriteIndex == 7) {
+                    if (spriteIndex == 7)
+                    {
                         Instantiate(batHitbox, new Vector3(transform.position.x + (1.5f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
                     }
                     break;
                 case 4:
-                    if(spriteIndex == 8) {
+                    if (spriteIndex == 8)
+                    {
                         Instantiate(glassHitbox, new Vector3(transform.position.x + (1.5f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
                     }
                     break;
@@ -246,40 +280,50 @@ public class Player : MonoBehaviour
 
             spriteRenderer.sprite = attackSprites[spriteIndex];
         }
-        else if(direction.x != 0f) {
+        else if (direction.x != 0f)
+        {
             spriteIndex++;
 
-            if(spriteIndex >= runSprites.Length) {
+            if (spriteIndex >= runSprites.Length)
+            {
                 spriteIndex = 0;
             }
 
             spriteRenderer.sprite = runSprites[spriteIndex];
         }
-        else {
+        else
+        {
             spriteIndex = 0;
             spriteRenderer.sprite = runSprites[spriteIndex];
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("Boss")) {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Security") || collision.gameObject.CompareTag("Rat") || collision.gameObject.CompareTag("Boss"))
+        {
             AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
             AudioSource hurt = sounds[3];
             hurt.Play();
         }
-        else if(collision.gameObject.CompareTag("To Level")) {
+        else if (collision.gameObject.CompareTag("To Level"))
+        {
             FindAnyObjectByType<GameManager>().LoadLevel(Manager.level + 1);
         }
-        else if(collision.gameObject.CompareTag("To Shop") && killCount == 0) {
+        else if (collision.gameObject.CompareTag("To Shop") && killCount == 0)
+        {
             Manager.level = FindAnyObjectByType<GameManager>().currLevel();
-            if(Manager.level == 6) {
+            if (Manager.level == 6)
+            {
                 Manager.loops++;
                 Manager.level = 2;
             }
             FindAnyObjectByType<GameManager>().LoadLevel(2);
         }
-        else if(collision.gameObject.CompareTag("To Next Area")) {
-            if(killCount == 0) {
+        else if (collision.gameObject.CompareTag("To Next Area"))
+        {
+            if (killCount == 0)
+            {
                 FindAnyObjectByType<GameManager>().LevelComplete();
                 /*if(FindAnyObjectByType<GameManager>().currLevel() == 1) {
                     FindAnyObjectByType<GameManager>().LoadLevel(4);
@@ -289,50 +333,68 @@ public class Player : MonoBehaviour
                 }*/
             }
         }
-        else if(collision.gameObject.CompareTag("Hearts Ammo")) {
+        else if (collision.gameObject.CompareTag("Hearts Ammo"))
+        {
             Manager.heartsAmmo += 1;
             Destroy(collision.gameObject);
         }
-        else if(collision.gameObject.CompareTag("Spades Ammo")) {
+        else if (collision.gameObject.CompareTag("Spades Ammo"))
+        {
             Manager.spadesAmmo += 1;
             Destroy(collision.gameObject);
         }
-        else if(collision.gameObject.CompareTag("Clubs Ammo")) {
+        else if (collision.gameObject.CompareTag("Clubs Ammo"))
+        {
             Manager.clubsAmmo += 1;
             Destroy(collision.gameObject);
         }
-        else if(collision.gameObject.CompareTag("Diamonds Ammo")) {
+        else if (collision.gameObject.CompareTag("Diamonds Ammo"))
+        {
             Manager.diamondsAmmo += 1;
             Destroy(collision.gameObject);
         }
     }
 
-    public void TakeDamage(float damage) {
+    public void TakeDamage(float damage)
+    {
         Manager.health -= damage;
-        if(Manager.health <= 0) {
+        if (Manager.health <= 30)
+        {
+            AudioSource[] sounds = gameObject.GetComponents<AudioSource>();
+            AudioSource lowHealth = sounds[7];
+            lowHealth.Play();
+        }
+        if (Manager.health <= 0)
+        {
             enabled = false;
             FindAnyObjectByType<GameManager>().LevelFailed();
         }
     }
 
-    public void GainChips(float amount) {
+    public void GainChips(float amount)
+    {
         Manager.chips += amount;
     }
 
-    public void KillReduction() {
+    public void KillReduction()
+    {
         killCount--;
-        if(killCount < 0) {
+        if (killCount < 0)
+        {
             killCount = 0;
         }
     }
 
-    public void NextStage() {
-        if(killCount == 0) {
+    public void NextStage()
+    {
+        if (killCount == 0)
+        {
             //display the signs on the stage in respective locations, then change the edge of the map objects to go to respective areas
         }
     }
 
-    public int sendKillCount() {
+    public int sendKillCount()
+    {
         return killCount;
     }
 }
