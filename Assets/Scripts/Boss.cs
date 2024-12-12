@@ -115,22 +115,6 @@ public class Boss : MonoBehaviour
         rigidbody.MovePosition(rigidbody.position + direction * Time.fixedDeltaTime);
     }
 
-    /*private void AnimateSprite() {
-        if(direction.x != 0f) {
-            spriteIndex++;
-
-            if(spriteIndex >= runSprites.Length) {
-                spriteIndex = 0;
-            }
-
-            spriteRenderer.sprite = runSprites[spriteIndex];
-        }
-        else {
-            spriteIndex = 0;
-            spriteRenderer.sprite = runSprites[spriteIndex];
-        }
-    }*/
-
     private void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.CompareTag("Hitbox")) {
             TakeDamage(FindAnyObjectByType<Player>().damage);
@@ -160,6 +144,7 @@ public class Boss : MonoBehaviour
             gameObject.SetActive(false);
             FindAnyObjectByType<Player>().KillReduction();
             FindAnyObjectByType<SignToggle>().toggle();
+            FindAnyObjectByType<SignToggle1>().toggle();
         }
 
         spriteRenderer.sprite = sprites[1];
@@ -179,13 +164,11 @@ public class Boss : MonoBehaviour
         phaseTwo = true;
         direction = Vector2.up * jumpStrength * 2.5f;
         moveSpeed = 0;
-        Instantiate(spawner, new Vector3(transform.position.x + (-15f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
-        Instantiate(spawner, new Vector3(transform.position.x + (15f * transform.right.x), transform.position.y, transform.position.z), Quaternion.identity);
-        Invoke(nameof(StartPhaseTwo), 10f);
+        Invoke(nameof(StartPhaseTwo), 7.5f);
     }
 
     private void StartPhaseTwo() {
         Destroy(platform);
-        moveSpeed = 3f;
+        moveSpeed = 4f;
     }
 }

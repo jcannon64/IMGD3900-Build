@@ -196,7 +196,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8182167960813921869
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -283,7 +283,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: b4bca16b280c02a4a9a1dbe347c3d959, type: 3}
   m_Resource: {fileID: 8300000, guid: b4bca16b280c02a4a9a1dbe347c3d959, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0

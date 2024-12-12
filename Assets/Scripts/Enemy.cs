@@ -31,7 +31,6 @@ public class Enemy : MonoBehaviour
     public TMP_Text healthText;
 
     [SerializeField] HealthBar healthBar;
-    //private HealthBar healthBar;
 
     private void Awake()
     {
@@ -52,14 +51,6 @@ public class Enemy : MonoBehaviour
         healthBar = GetComponentInChildren<HealthBar>();
         MaxHealth = health;
     }
-
-    /*private void OnEnable() {
-        InvokeRepeating(nameof(AnimateSprite), 1f/20f, 1f/20f);
-    }
-
-    private void OnDisable() {
-        CancelInvoke();
-    }*/
 
     private void CheckCollision()
     {
@@ -137,22 +128,6 @@ public class Enemy : MonoBehaviour
     {
         rigidbody.MovePosition(rigidbody.position + direction * Time.fixedDeltaTime);
     }
-
-    /*private void AnimateSprite() {
-        if(direction.x != 0f) {
-            spriteIndex++;
-
-            if(spriteIndex >= runSprites.Length) {
-                spriteIndex = 0;
-            }
-
-            spriteRenderer.sprite = runSprites[spriteIndex];
-        }
-        else {
-            spriteIndex = 0;
-            spriteRenderer.sprite = runSprites[spriteIndex];
-        }
-    }*/
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

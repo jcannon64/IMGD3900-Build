@@ -296,7 +296,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 2513017918486519362, guid: 928b9c1ba6de2ff48a587334ac157ebb, type: 3}
   - {fileID: 5055599153528870075, guid: 46cd813569741e84aa50435d2a27bd4d, type: 3}
-  moveSpeed: 2.5
+  moveSpeed: 2
   jumpStrength: 25
   health: 250
   MaxHealth: 250
@@ -317,7 +317,7 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: a985d014b6815184db10335748738d28, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.8
   Loop: 0
   Mute: 0
   Spatialize: 0

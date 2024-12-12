@@ -206,30 +206,25 @@ public class Player : MonoBehaviour
             }
         }
 
-        //left shift to swap weapons
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (weapon >= 4)
-            {
-                weapon = 1;
-            }
-            else weapon++;
-
-            switch (weapon)
-            {
-                case 1:
-                    attackSprites = punchSprites;
-                    break;
-                case 2:
-                    attackSprites = daggerSprites;
-                    break;
-                case 3:
-                    attackSprites = batSprites;
-                    break;
-                case 4:
-                    attackSprites = glassSprites;
-                    break;
-            }
+            weapon = 1;
+            attackSprites = punchSprites;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            weapon = 2;
+            attackSprites = daggerSprites;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            weapon = 3;
+            attackSprites = batSprites;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            weapon = 4;
+            attackSprites = glassSprites;
         }
     }
 
@@ -312,6 +307,7 @@ public class Player : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("To Shop") && killCount == 0)
         {
+            TakeDamage(-10);
             Manager.level = FindAnyObjectByType<GameManager>().currLevel();
             if (Manager.level == 6)
             {
@@ -324,16 +320,14 @@ public class Player : MonoBehaviour
         {
             if (killCount == 0)
             {
+                TakeDamage(-15);
                 FindAnyObjectByType<GameManager>().LevelComplete();
-                /*if(FindAnyObjectByType<GameManager>().currLevel() == 1) {
-                    FindAnyObjectByType<GameManager>().LoadLevel(4);
-                }
-                else if(FindAnyObjectByType<GameManager>().currLevel() == 4) {
-                    FindAnyObjectByType<GameManager>().LoadLevel(1);
-                }*/
             }
         }
-        else if (collision.gameObject.CompareTag("Hearts Ammo"))
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Hearts Ammo"))
         {
             Manager.heartsAmmo += 1;
             Destroy(collision.gameObject);
@@ -382,14 +376,6 @@ public class Player : MonoBehaviour
         if (killCount < 0)
         {
             killCount = 0;
-        }
-    }
-
-    public void NextStage()
-    {
-        if (killCount == 0)
-        {
-            //display the signs on the stage in respective locations, then change the edge of the map objects to go to respective areas
         }
     }
 
